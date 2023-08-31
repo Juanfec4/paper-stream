@@ -1,0 +1,25 @@
+@use "../../../styles/global.scss" as *;
+
+.category {
+  &__gallery {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: $gap-sm;
+  }
+  &__card {
+    background-color: rgba($light-grey, 0.1);
+    padding: $padding-sm;
+    border-radius: $radius-md;
+    border: solid 1px rgba($light-grey, 0.1);
+    &:hover {
+      background-color: rgba($bee-yellow, 0.1);
+      cursor: pointer;
+    }
+  }
+  &__card-text {
+    color: $bee-yellow;
+    margin: 0;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../../../styles/global.scss" as *;
+
+$search-box-width-max: 500px;
+
+.search {
+  display: flex;
+  gap: $gap-sm;
+  border: $border-sm solid transparent;
+  background-color: rgba($light-grey, 0.1);
+  border-radius: $radius-sm;
+  padding: calc($padding-sm / 2) $padding-sm;
+  width: 100%;
+  max-width: $search-box-width-max;
+  &:focus-within {
+    border-color: $bee-yellow;
+  }
+  &__icon {
+    filter: invert(100%);
+  }
+  &__input {
+    border: none;
+    outline: transparent;
+    background-color: transparent;
+    color: $white;
+    font-family: $font-roboto;
+    font-weight: 400;
+    font-size: 16px;
+    &::placeholder {
+      font-weight: 300;
+    }
+  }
+}

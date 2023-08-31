@@ -1,0 +1,41 @@
+@use "../../../styles/global.scss" as *;
+
+.highlight-carousel {
+  position: relative;
+  ::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  &__content {
+    display: flex;
+    gap: $gap-lg;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-radius: $radius-sm;
+    touch-action: none;
+  }
+  &__button {
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(black, 0.9);
+    border-radius: $radius-sm;
+    border: none;
+    cursor: pointer;
+    &--next {
+      @extend .highlight-carousel__button;
+      right: 0;
+    }
+    &--prev {
+      @extend .highlight-carousel__button;
+      left: 0;
+    }
+  }
+  &__button-icon {
+    filter: invert(100%);
+  }
+}

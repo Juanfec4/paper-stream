@@ -1,0 +1,18 @@
+@use "../../../styles/global.scss" as *;
+
+.dot {
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__element {
+    color: rgba($bee-yellow, 0.25);
+    font-size: 50px;
+    &--active {
+      @extend .dot__element;
+      color: $bee-yellow;
+    }
+  }
+}

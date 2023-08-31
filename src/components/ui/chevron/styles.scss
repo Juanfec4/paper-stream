@@ -1,0 +1,13 @@
+@use "../../../styles/global.scss" as *;
+
+.chevron {
+  &__container {
+    background-color: $bee-yellow;
+    border-radius: $radius-sm;
+    padding: $padding-sm;
+    cursor: pointer;
+  }
+  &__icon {
+    vertical-align: bottom;
+  }
+}

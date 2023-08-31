@@ -1,0 +1,16 @@
+@use "../../../styles/global.scss" as *;
+
+.icon-button {
+  background-color: $bee-yellow;
+  border: none;
+  border-radius: $radius-sm;
+  &:hover {
+    background-color: $white;
+  }
+  &--toggle {
+    @extend .icon-button;
+  }
+  &__image {
+    vertical-align: bottom;
+  }
+}

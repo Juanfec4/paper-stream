@@ -1,0 +1,40 @@
+@use "../../../styles/global.scss" as *;
+
+$card-width: 200px;
+$review-height: 12px;
+.highlight-card {
+  position: relative;
+  cursor: pointer;
+  &__image {
+    width: $card-width;
+    height: 100%;
+    border-radius: $radius-md;
+  }
+  &__overlay {
+    top: $padding-xs;
+    left: $padding-xs;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba($dark-grey, 0.75);
+    border-radius: $radius-md $radius-md;
+    width: calc(50px);
+    backdrop-filter: blur(10px);
+  }
+  &__rating {
+    margin: 0;
+    color: $white;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: $padding-sm;
+    gap: $gap-sm;
+  }
+  &__icon {
+    filter: invert(100%);
+    height: $review-height;
+  }
+  &__rating-text {
+    margin: 0;
+    font-size: $review-height;
+  }
+}

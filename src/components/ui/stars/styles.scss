@@ -1,0 +1,9 @@
+@use "../../../styles/global.scss" as *;
+
+.star {
+  vertical-align: center;
+  filter: invert(100%);
+  &--active {
+    @extend .star;
+  }
+}

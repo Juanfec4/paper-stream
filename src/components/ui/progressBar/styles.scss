@@ -1,0 +1,16 @@
+@use "../../../styles/global.scss" as *;
+
+.progress-bar {
+  &__track {
+    background-color: rgba($bee-yellow, 0.25);
+    height: 6px;
+    max-width: 100%;
+    border-radius: $radius-md;
+    margin: $margin-sm 0;
+  }
+  &__slider {
+    background-color: $bee-yellow;
+    border-radius: $radius-md;
+    height: 100%;
+  }
+}

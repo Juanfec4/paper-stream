@@ -1,0 +1,36 @@
+@use "../../../styles/global.scss" as *;
+
+$site-logo-radius: 35px;
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: $gap-sm;
+  border-radius: $radius-sm;
+  padding: calc($padding-sm / 2);
+  max-width: min-content;
+  &:hover {
+    background-color: rgba($light-grey, 0.05);
+    cursor: pointer;
+  }
+  &__background {
+    background-color: $bee-yellow;
+    display: flex;
+    border-radius: 50%;
+    height: $site-logo-radius;
+    width: $site-logo-radius;
+    padding: $padding-sm;
+    box-sizing: border-box;
+  }
+  &__icon {
+    vertical-align: bottom;
+  }
+  &__title {
+    color: $white;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: $bee-yellow;
+    text-underline-offset: 6px;
+    margin: 0;
+  }
+}
