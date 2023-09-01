@@ -24,6 +24,6 @@ To run this project, you will need to add the following environment variables to
 
 `VITE_API_URL`=' https://api.themoviedb.org/3 '
 
-`VITE_API_KEY`=' <api key> '
+`VITE_API_KEY`=' YOUR API KEY '
 
 `VITE_API_IMAGE_URL`=' https://image.tmdb.org/t/p/original '
