@@ -1,8 +1,29 @@
-# React + Vite
+# Paper Stream
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple project made to apply the learnings from BrainStation's API lab. The goal was to fetcha data from the TMDB, and display it in the front end.
 
-Currently, two official plugins are available:
+## #TODO
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design.
+- Make category pages.
+- Improve image loading.
+
+## Initialization
+
+To start the development server.
+
+```
+npm install
+
+npm run dev
+```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`VITE_API_URL`=' https://api.themoviedb.org/3 '
+
+`VITE_API_KEY`=' <api key> '
+
+`VITE_API_IMAGE_URL`=' https://image.tmdb.org/t/p/original '
