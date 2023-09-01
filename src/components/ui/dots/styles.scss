@@ -9,7 +9,10 @@
   }
   &__element {
     color: rgba($bee-yellow, 0.25);
-    font-size: 50px;
+    font-size: 25px;
+    @include md {
+      font-size: 50px;
+    }
     &--active {
       @extend .dot__element;
       color: $bee-yellow;
