@@ -9,8 +9,11 @@ $search-box-width-max: 500px;
   background-color: rgba($light-grey, 0.1);
   border-radius: $radius-sm;
   padding: calc($padding-sm / 2) $padding-sm;
-  width: 100%;
-  max-width: $search-box-width-max;
+  width: 200px;
+  @include md {
+    width: 100%;
+    max-width: $search-box-width-max;
+  }
   &:focus-within {
     border-color: $bee-yellow;
   }

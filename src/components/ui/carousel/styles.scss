@@ -1,6 +1,8 @@
 @use "../../../styles/global.scss" as *;
 
-$card-height: 400px;
+$card-height-sm: 150px;
+$card-height-md: 200px;
+$card-height-lg: 400px;
 
 .carousel {
   max-width: 75vw;
@@ -17,19 +19,36 @@ $card-height: 400px;
     cursor: pointer;
   }
   &__card-image-container {
-    height: $card-height;
+    height: 75px;
+    @include sm-lg {
+      height: $card-height-sm;
+    }
+    @include md {
+      height: $card-height-md;
+    }
+    @include lg {
+      height: $card-height-lg;
+    }
     overflow: hidden;
     border-radius: $radius-md;
     border: solid $bee-yellow 3px;
     background-color: black;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
   }
   &__card-image {
     max-width: 100%;
     vertical-align: bottom;
+    height: 100%;
+    background-position: center;
   }
   &__card-title {
     color: $white;
     margin: $margin-sm 0;
     padding-left: calc(($gap-sm * 4) + 32px + $border-sm);
+    font-size: 1rem;
+    @include md {
+      font-size: 2rem;
+    }
   }
 }

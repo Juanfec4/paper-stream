@@ -21,5 +21,9 @@
     color: $bee-yellow;
     margin: 0;
     font-weight: 300;
+    font-size: 0.75rem;
+    @include md {
+      font-size: 1.25rem;
+    }
   }
 }

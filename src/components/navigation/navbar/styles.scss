@@ -4,12 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  @include md {
+    flex-direction: row;
+  }
   background-color: $charcoal-grey;
   padding: $padding-sm;
   gap: $gap-lg;
   &__content {
     display: flex;
-    min-width: 500px;
+    @include md {
+      min-width: 500px;
+    }
     gap: $gap-lg;
   }
 }

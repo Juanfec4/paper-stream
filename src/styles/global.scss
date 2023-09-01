@@ -26,6 +26,40 @@ $padding-lg: 20px;
 
 $border-sm: 1px;
 
+//RESPONSIVE
+$breakpoints: (
+  "mobile": 0px,
+  "mobile-large": 400px,
+  "tablet": 768px,
+  "desktop": 1280px,
+);
+
+//Mobile Large
+@mixin sm-lg {
+  @media (min-width: map-get($breakpoints,"mobile-large")) {
+    @content;
+  }
+}
+
+//Mobile Breakpoint
+@mixin sm {
+  @media (min-width: map-get($breakpoints,"mobile")) {
+    @content;
+  }
+}
+//Tablet Breakpoint
+@mixin md {
+  @media (min-width: map-get($breakpoints,"tablet")) {
+    @content;
+  }
+}
+//Desktop Breakpoint
+@mixin lg {
+  @media (min-width: map-get($breakpoints,"desktop")) {
+    @content;
+  }
+}
+
 * {
   scroll-behavior: smooth;
   font-family: $font-roboto;
@@ -39,7 +73,11 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  width: 100%;
+  padding: $padding-sm;
+  @include md {
+    max-width: 1200px;
+  }
   margin: 0 auto;
 }
 

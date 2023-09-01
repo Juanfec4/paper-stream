@@ -11,11 +11,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    @include md {
+      flex-direction: row;
+    }
     height: 600px;
     padding: calc($padding-lg * 2);
   }
   &__movie-poster {
-    height: 400px;
+    height: 150px;
+    @include md {
+      height: 400px;
+    }
     border-radius: $radius-md;
   }
   &__box {
@@ -41,8 +48,11 @@
     opacity: 0.5;
   }
   &__movie-misc-info {
-    display: flex;
+    display: none;
     gap: $gap-sm;
+    @include md {
+      display: flex;
+    }
   }
   &__movie-title {
     color: $bee-yellow;
@@ -53,8 +63,12 @@
     color: $white;
   }
   &__movie-description {
+    display: none;
     max-width: 80ch;
     color: rgba($white, 0.75);
+    @include md {
+      display: block;
+    }
   }
   &__movie-genre-list {
     display: flex;
