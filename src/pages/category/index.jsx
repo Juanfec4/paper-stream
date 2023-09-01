@@ -28,7 +28,6 @@ const CategoryPage = () => {
     },
   ];
 
-  console.log(name);
   return (
     <section>
       <main>
