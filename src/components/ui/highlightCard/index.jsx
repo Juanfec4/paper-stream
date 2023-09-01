@@ -11,6 +11,7 @@ const HighlightCard = ({ movie }) => {
       <img
         src={import.meta.env.VITE_API_IMAGE_URL + movie.poster_path}
         className="highlight-card__image"
+        loading="lazy"
         onClick={handleCLick}
       />
       <div className="highlight-card__overlay">

@@ -7,16 +7,16 @@ import chevronRight from "../../../assets/icons/chevron-right.svg";
 
 import "./styles.scss";
 import ProgressBar from "../progressBar";
-const HighlightCarousel = ({ title, endpoint }) => {
+const HighlightCarousel = ({ title, endpoint, page }) => {
   const [movies, setMovies] = useState(undefined);
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const [maxScroll, setMaxScroll] = useState(0);
   const carouselRef = useRef();
   useEffect(() => {
-    apiService.getAll(endpoint).then((response) => {
+    apiService.getAll(endpoint, page).then((response) => {
       setMovies(response.results);
     });
-  }, []);
+  }, [endpoint]);
 
   const updateMaxScroll = () => {
     return setMaxScroll(
@@ -58,7 +58,7 @@ const HighlightCarousel = ({ title, endpoint }) => {
           {movies ? (
             <>
               {movies.map((movie) => {
-                return <HighlightCard movie={movie} key={movie.id} />;
+                return movie.poster_path ? <HighlightCard movie={movie} key={movie.id} /> : null;
               })}
             </>
           ) : null}

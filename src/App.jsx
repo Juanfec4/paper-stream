@@ -10,7 +10,7 @@ function App() {
         <Carousel />
         <HighlightCarousel title={"Trending"} endpoint={"/trending/movie/week"} />
         <HighlightCarousel title={"Critically acclaimed"} endpoint={"/movie/top_rated"} />
-        <HighlightCarousel title={"Must watch series"} endpoint={"/tv/top_rated"} />
+        <HighlightCarousel title={"Must watch"} endpoint={"/movie/popular"} page={"3"} />
         <CategoryGallery />
       </main>
     </>

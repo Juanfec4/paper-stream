@@ -4,7 +4,6 @@ import playIcon from "../../../assets/icons/player-play-filled.svg";
 import Stars from "../stars";
 import IconButton from "../iconButton";
 const MovieDetails = ({ movie }) => {
-  console.log(movie);
   return (
     <div
       style={{
