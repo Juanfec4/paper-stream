@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import Navbar from "./components/navigation/navbar/index.jsx";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import MoviePage from "./pages/movie/index.jsx";
+import CategoryPage from "./pages/category/index.jsx";
 
 const AppLayout = () => {
   return (
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <App /> },
       { path: "/movie/:id", element: <MoviePage /> },
+      { path: "/category/:id", element: <CategoryPage /> },
     ],
   },
 ]);

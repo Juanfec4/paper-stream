@@ -22,7 +22,7 @@ const MoviePage = () => {
   }, [id]);
 
   return (
-    <div>
+    <section>
       {movie ? (
         <>
           <MovieDetails movie={movie} />
@@ -34,7 +34,7 @@ const MoviePage = () => {
           </main>
         </>
       ) : null}
-    </div>
+    </section>
   );
 };
 export default MoviePage;

@@ -39,4 +39,20 @@ const getById = async (endpoint, id, appendEndpoints = " ") => {
   }
 };
 
-export default { getAll, getById };
+const getByGenre = async (endpoint, genreID, page = "1") => {
+  try {
+    let response = await axios.get(`${import.meta.env.VITE_API_URL}/${endpoint}`, {
+      ...CONFIG,
+      params: {
+        ...CONFIG.params,
+        with_genres: genreID,
+        page,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
+
+export default { getAll, getById, getByGenre };

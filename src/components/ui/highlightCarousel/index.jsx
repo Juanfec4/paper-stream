@@ -58,7 +58,7 @@ const HighlightCarousel = ({ title, endpoint, page }) => {
           {movies ? (
             <>
               {movies.map((movie) => {
-                return movie.poster_path ? <HighlightCard movie={movie} key={movie.id} /> : null;
+                return <HighlightCard movie={movie} key={movie.id} />;
               })}
             </>
           ) : null}

@@ -1,0 +1,29 @@
+@use "../../../styles/global.scss" as *;
+
+.movie-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-lg;
+  align-items: center;
+  justify-content: center;
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-sm;
+  }
+  &__button {
+    background-color: $bee-yellow;
+    border: none;
+    border-radius: $radius-sm;
+    font-weight: 500;
+    padding: $padding-sm;
+    font-size: 1rem;
+  }
+  &__page {
+    background-color: $bee-yellow;
+    padding: $padding-sm $padding-lg;
+    border-radius: $radius-sm;
+    font-size: 1rem;
+  }
+}
